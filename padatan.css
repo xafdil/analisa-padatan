@@ -109,6 +109,19 @@ button + button {
     margin-left: 10px;
 }
 
+button[onclick="resetAll()"] {
+    background-color: #dc3545; /* Red color */
+    color: white;
+}
+
+button[onclick="resetAll()"]:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+button[onclick="resetAll()"]:active {
+    background-color: #bd2130; /* Even darker red on active */
+}
+
 footer {
     text-align: center;
     padding: 15px;
