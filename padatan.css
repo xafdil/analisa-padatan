@@ -1,0 +1,124 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+    background-color: #f0f7f4; /* Light pastel green background */
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+    color: #2d6a4f; /* Olive green for headings */
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 28px;
+    border-bottom: 2px solid #4caf50; /* Pastel green border */
+    padding-bottom: 10px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #4caf50; /* Pastel green */
+}
+
+h3 {
+    font-size: 20px;
+    color: #388e3c; /* Slightly darker green */
+}
+
+.press-container, .claybath-container, .kernel-container, .ripple-container {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: #f5faf6; /* Very light pastel green background */
+}
+
+.input-group {
+    display: grid;
+    grid-template-columns: 120px 100px; /* Adjusted input width */
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+label {
+    font-weight: 600;
+    color: #555;
+}
+
+input {
+    width: 100%; /* Input width is now controlled by grid-template-columns */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #4caf50; /* Pastel green focus border */
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Green shadow */
+}
+
+.results {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #e8f5e9; /* Light green background for results */
+    border-radius: 5px;
+}
+
+.results p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4caf50; /* Pastel green button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #388e3c; /* Darker green on hover */
+}
+
+button:active {
+    background-color: #2d6a4f; /* Olive green on active */
+}
+
+button + button {
+    margin-left: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #2d6a4f; /* Olive green */
+    color: white;
+    margin-top: 30px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 0; /* Remove default paragraph margin */
+}
