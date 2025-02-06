@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg" href="https://www.svgrepo.com/show/397174/palm-tree.svg">
+    <link rel="icon" type="image/svg" href="https://www.svgrepo.com/svg/397174/palm-tree">
     <link rel="stylesheet" href="padatan.css">
     <title>Analisa Padatan</title>
 </head>
@@ -44,9 +44,8 @@
         </div>
 
         <!-- Shell Claybath Calculator -->
-        <div id="claybaths">
         <h1>Shell Claybath</h1>
-        <div class="claybath-container" id="claybath">
+        <div class="claybath-container" id="claybath1">
             <h2>Shell Claybath 1</h2>
             <div class="input-group">
                 <label for="NUSC1">Nut Utuh:</label>
@@ -56,44 +55,48 @@
                 <label for="NPSC1">Nut Pecah:</label>
                 <input type="number" step="0.01" id="NPSC1" placeholder="gram (g)">
             </div>
-            <div class="input-group">
-                <label for="KUSC1">Kernel Utuh:</label>
-                <input type="number" step="0.01" id="KUSC1" placeholder="gram (g)">
-            </div>
-            <div class="input-group">
-                <label for="KPSC1">Kernel Pecah:</label>
-                <input type="number" step="0.01" id="KPSC1" placeholder="gram (g)">
-            </div>
             <div id="results1">
                 <p>Nut Utuh: <span class="NUSCH Claybath1">0.00</span></p>
                 <p>Nut Pecah: <span class="NPSCH Claybath1">0.00</span></p>
-                <p>Kernel Utuh: <span class="KUSCH Claybath1">0.00</span></p>
-                <p>Kernel Pecah: <span class="KPSCH Claybath1">0.00</span></p>
-                <p>Total Kernel: <span class="TotalKernel Claybath1">0.00</span></p>
             </div>
         </div>
+        
+        <div class="claybath-container" id="claybath2">
+            <h2>Shell Claybath 2</h2>
+            <div class="input-group">
+                <label for="NUSC2">Nut Utuh:</label>
+                <input type="number" step="0.01" id="NUSC2" placeholder="gram (g)">
+            </div>
+            <div class="input-group">
+                <label for="NPSC2">Nut Pecah:</label>
+                <input type="number" step="0.01" id="NPSC2" placeholder="gram (g)">
+            </div>
+            <div id="results2">
+                <p>Nut Utuh: <span class="NUSCH Claybath2">0.00</span></p>
+                <p>Nut Pecah: <span class="NPSCH Claybath2">0.00</span></p>
+            </div>
         </div>
 
         <!-- Kernel Calculator -->
         <h1>Kernel Claybath, Grading, Gabungan & Produksi</h1>
         <div id="kernels">
-            <div class="kernel-container" id="kernel">
+            <div class="kernel-container">
                 <h2>Kernel Claybath</h2>
                 <div class="input-group">
-                    <label for="NUK">Nut Utuh:</label>
-                    <input type="number" step="0.01" id="NUK" placeholder="gram (g)">
+                    <label for="NUK1">Nut Utuh:</label>
+                    <input type="number" step="0.01" id="NUK1" placeholder="gram (g)">
                 </div>
                 <div class="input-group">
-                    <label for="NPK">Nut Pecah:</label>
-                    <input type="number" step="0.01" id="NPK" placeholder="gram (g)">
+                    <label for="NPK1">Nut Pecah:</label>
+                    <input type="number" step="0.01" id="NPK1" placeholder="gram (g)">
                 </div>
                 <div class="input-group">
-                    <label for="KPK">Kernel Pecah:</label>
-                    <input type="number" step="0.01" id="KPK" placeholder="gram (g)">
+                    <label for="KPK1">Kernel Pecah:</label>
+                    <input type="number" step="0.01" id="KPK1" placeholder="gram (g)">
                 </div>
                 <div class="input-group">
-                    <label for="CK">Cangkang:</label>
-                    <input type="number" step="0.01" id="CK" placeholder="gram (g)">
+                    <label for="CK1">Cangkang:</label>
+                    <input type="number" step="0.01" id="CK1" placeholder="gram (g)">
                 </div>
                 <div id="results1">
                     <p>Nut Utuh: <span class="NUKH Kernel1">0.00</span></p>
@@ -109,15 +112,15 @@
         <!-- Ripple Mill Calculator -->
         <h1>Ripple Mill</h1>
         <div id="ripples">
-            <div class="ripple-container" id="ripple">
+            <div class="ripple-container">
                 <h2>Ripple Mill 1</h2>
                 <div class="input-group">
-                    <label for="NUR">Nut Utuh:</label>
-                    <input type="number" step="0.01" id="NUR" placeholder="gram (g)">
+                    <label for="NUR1">Nut Utuh:</label>
+                    <input type="number" step="0.01" id="NUR1" placeholder="gram (g)">
                 </div>
                 <div class="input-group">
-                    <label for="NPR">Nut Pecah:</label>
-                    <input type="number" step="0.01" id="NPR" placeholder="gram (g)">
+                    <label for="NPR1">Nut Pecah:</label>
+                    <input type="number" step="0.01" id="NPR1" placeholder="gram (g)">
                 </div>
                 <div id="results1">
                     <p>Efficiency: <span class="EFFICIENCY Ripple1">0.00</span></p>
@@ -130,9 +133,9 @@
         <button onclick="calculateAll()">Hitung</button>
         <button onclick="resetAll()">Reset</button>
     </div>
+    <script src="padatan.js"></script>
     <footer>
         <p>&copy;2025 AFDIL SAPUTRA</p>
     </footer>
-    <script src="padatan.js"></script>
 </body>
 </html>
