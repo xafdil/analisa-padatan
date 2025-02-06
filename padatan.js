@@ -15,22 +15,6 @@
             }
         }
 
-        function addClaybaths() {
-            let container = document.getElementById('claybaths'); // Get the container element with ID 'claybaths'
-            let claybathTemplate = container.querySelector('.claybath-container'); // Find the template inside the container
-            for (let i = 2; i <= 2; i++) { // Loop to create additional claybath containers (if needed)
-                let newClaybath = claybathTemplate.cloneNode(true); // Clone the template
-                newClaybath.querySelector('h2').textContent = `Shell Claybath ${i}`; // Update the heading text
-                Array.from(newClaybath.querySelectorAll('input, .results')).forEach(el => { // Find all inputs and elements with class 'results'
-                    el.id = el.id ? el.id.replace('1', i) : ''; // Update their IDs by replacing '1' with the current loop index
-                });
-                Array.from(newClaybath.querySelectorAll('.NUSCH, .NPSCH, .KUSCH, .KPSCH, .TotalKernel')).forEach(el => { // Find elements with specific classes
-                    el.className = el.className.replace('Claybath1', `Claybath${i}`); // Update their class names to reflect the claybath number
-                });
-                container.appendChild(newClaybath); // Append the cloned container to the main container
-            }
-        }
-
         // Function to clone and append kernel containers
         function addKernels() {
             let container = document.getElementById('kernels');
@@ -69,10 +53,8 @@
 
         // Add additional presses, kernels, and ripple mills on page load
         addPresses();
-        addClaybaths();
         addKernels();
         addRipples();
-
 
         // Custom rounding function
         function customRound(number) {
@@ -114,23 +96,15 @@
             }
 
             // Shell Claybath Calculation
-            for (let i = 1; i <= 4; i++) {
+            for (let i = 1; i <= 2; i++) {
                 const NUSC = parseFloat(document.getElementById(`NUSC${i}`).value) || 0;
                 const NPSC = parseFloat(document.getElementById(`NPSC${i}`).value) || 0;
-                const KUSC = parseFloat(document.getElementById(`KUSC${i}`).value) || 0;
-                const KPSC = parseFloat(document.getElementById(`KPSC${i}`).value) || 0;
 
                 const NUSCH = NUSC * 0.04; // Formula: (nusc * 40%) / 10 = nusch
                 const NPSCH = NPSC * 0.05; // Formula: (npsc * 50%) / 10 = npsch
-                const KUSCH = KUSC / 10; // Formula: (kusc / 10%) / 10 = kusch
-                const KPSCH = KPSC / 10; // Formula: (kpsc / 10%) / 10 = kpsch
-                const TotalKernel = NUSCH + NPSCH + KUSCH + KPSCH; 
 
                 document.querySelector(`.NUSCH.Claybath${i}`).textContent = NUSCH.toFixed(2);
                 document.querySelector(`.NPSCH.Claybath${i}`).textContent = NPSCH.toFixed(2);
-                document.querySelector(`.KUSCH.Claybath${i}`).textContent = KUSCH.toFixed(2);
-                document.querySelector(`.KPSCH.Claybath${i}`).textContent = KPSCH.toFixed(2);
-                document.querySelector(`.TotalKernel.Claybath${i}`).textContent = TotalKernel.toFixed(2);
             }
 
             // Kernel Calculation
@@ -181,16 +155,11 @@
             }
 
             // Reset Shell Claybath Calculator
-            for (let i = 1; i <= 4; i++) {
+            for (let i = 1; i <= 2; i++) {
                 document.getElementById(`NUSC${i}`).value = '';
                 document.getElementById(`NPSC${i}`).value = '';
-                document.getElementById(`KUSC${i}`).value = '';
-                document.getElementById(`KPSC${i}`).value = '';
                 document.querySelector(`.NUSCH.Claybath${i}`).textContent = '0.00';
                 document.querySelector(`.NPSCH.Claybath${i}`).textContent = '0.00';
-                document.querySelector(`.KUSCH.Claybath${i}`).textContent = '0.00';
-                document.querySelector(`.KPSCH.Claybath${i}`).textContent = '0.00';
-                document.querySelector(`.TotalKernel.Claybath${i}`).textContent = '0.00';
             }
 
             // Reset Kernel Calculator
